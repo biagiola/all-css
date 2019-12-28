@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>#10 - Responsive Grid Example</title>
+    <style>
+        body{
+            color: #fff;
+            font-family: Verdana;
+            text-align: center;
+            background-color: #000d1a;
+        }
+        #content{
+            display: grid;
+            background-color: red;
+            grid-auto-rows: minmax(100px, auto);
+            max-width: 960px;
+            margin: 0 auto; 
+            grid-gap: 10px;
+            grid-template-areas: 
+                "header header header header"
+                "aside aside main main" 
+                "section section section section"
+                "section section section section"
+                "footer footer footer footer";    
+        }
+        @media only screen and (min-width: 760px){
+            #content{
+                background-color:fuchsia;
+            }
+        }
+/*
+            #content{
+                display: grid;
+                grid-auto-rows: minmax(100px, auto);
+                max-width: 960px;
+                margin: 0 auto; 
+                grid-gap: 10px;
+                grid-template-areas: 
+                   "header header header header"
+                    "aside aside aside aside"
+                    "main main main main" 
+                    "section section section section"
+                    "footer footer footer footer";    
+            }
+*/    
+        
+        #content > *{
+            background: #3bbced;
+            padding: 30px;
+        }
+        .header{
+            grid-area: header;
+        }
+        .main{
+            grid-area: main;
+        }
+        .section{
+            grid-area: section;
+        }
+        .aside{
+            grid-area: aside;
+        }
+        .nav{
+            grid-area: nav;
+        }
+        .footer{
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <div class="header">Header</div>
+        <div class="main">Main</div>
+        <div class="section">Section</div>
+        <div class="aside">Aside</div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>

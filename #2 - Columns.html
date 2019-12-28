@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>#2 - Columns</title>
+    <style>
+        body {
+            color: #fff;
+            font-family: 'Nunito Semibold';
+            text-align: center;
+        }
+
+        .text {
+            color: black;
+            font-family: Helvetica;
+            text-align: left;
+        }
+
+        #content {
+            display: grid;
+            grid-template-columns: 30% 20% 50%;
+            /* grid-template-columns: 30% 20% 50%; */
+            /* grid-template-columns: 1fr 1fr 1fr */
+            /* grid-template-columns: repeat(3, 1fr) */
+            grid-template-rows: 200px 400px 400px;
+            /* grid-auto-rows: repeat(3, minmax(200px, auto)) */
+            grid-auto-rows: minmax(200px, auto);
+            /*define tamaño de la fila*/
+            max-width: 960px;
+            margin: 0 auto;
+            grid-row-gap: 10px;
+            grid-column-gap: 10px;
+            grid-gap: 10px;
+            /* same above */
+            margin-right: 20px;
+        }
+
+        #content div {
+            background: #3bbced;
+            padding: 30px;
+            border-radius: 1px;
+            /*            margin: 15px; esto añade margin fuera de la caja también*/
+        }
+
+        #content div:nth-child(even) {
+            background: #777;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="text">grid-templete-columns<br>33.3% 33.3% 33.3%</div>
+    <div id="content">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et ullam magnam ratione eum excepturi
+            molestiae, aliquam delectus saepe! Molestias ab, sapiente nemo illo aperiam rerum illum provident modi ex
+            quisquam autem doloribus saepe officiis, quaerat voluptatibus accusantium quae laboriosam quia aliquam
+            dicta dignissimos similique laborum? Aliquid enim ipsum, fuga illo debitis nostrum rerum ad saepe,
+            consectetur praesentium quidem iure. Sed cupiditate iure impedit eum odio error quidem repellendus corporis
+            sapiente adipisci, fugit nemo voluptatum non maxime laboriosam eius iusto ducimus.</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>8</div>
+    </div><br>
+</body>
+
+</html>

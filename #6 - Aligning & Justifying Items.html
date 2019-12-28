@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>#6 - Aligning & Justifying Items</title>
+    <style>
+        body{
+            color: #fff;
+            font-family: 'Nunito Semibold';
+            text-align: center;
+            background-color: #000d1a;
+        }
+        #content{
+            background-color: lightcoral;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: minmax(150px, auto);
+            grid-gap: 10px;
+            max-width: 960px;
+            margin: 0 auto;
+            border: 1px dotted white;
+            /* align up and down */
+            align-items: stretch;/* default value*/
+            align-items: end;
+            align-items: start;
+            /* justify left and right */
+            justify-items: stretch;
+            justify-items: start;
+            justify-items: end;
+            
+        }
+        .one{
+            align-self: start;
+            justify-self: start;
+        }
+        .two{
+            align-self: center;
+            justify-self: stretch;
+        }
+        .three{
+            align-self: start;
+            justify-self: end;
+        }
+        .four{
+            align-self: stretch;
+            justify-self: center;
+        }
+        .six{
+            align-self: center;
+            justify-self: center;
+        }
+        #content div {
+            background: #3bbced;
+            padding: 30px;
+            border: 1px dotted white;
+            border-radius: 1px;   
+        }   
+        #content div:nth-child(even){
+            background-color: salmon;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+       
+        <div class="one">1</div>
+        <div class="two">2</div>
+        <div class="three">3</div>
+        <div class="four">4</div>
+        <div class="five">5</div>
+        <div class="six">6</div>
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>#5 - Nested Grids</title>
+    <style>
+        body{
+            color: #fff;
+            font-family: 'Nunito Semibold';
+            text-align: center;
+            background-color: #000d1a;
+        }
+        #content{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+        #content div {
+            background: #3bbced;
+            padding: 30px;
+            border-radius: 1px;   
+            padding: 30px;
+        }   
+        #content div:nth-child(even){
+            background-color: salmon;
+        }
+        .nested{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);    
+            /*grid-template-columns: 1fr 1fr;*/
+            grid-gap: 12px;
+            grid-column: 1/3;
+            grid-column: span 2;/* same above */
+        }
+        .nested p{
+            border: 1px dashed green;
+            margin: 0;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+       
+        <div class="one">1</div>
+        <div class="two">2</div>
+        <div class="three">3</div>
+        <div class="nested">
+            <p>1</p>
+            <p>2</p>
+            <p>3</p>
+            <p>4</p>
+        </div>
+        <div class="five">5</div>
+        <div class="six">6</div>
+        
+    </div>
+</body>
+</html>
